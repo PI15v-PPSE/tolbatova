@@ -1,9 +1,10 @@
 /**
  * Обработка клавиатуры
  * @module Клавиатура
+ * @type {{bind: Function, reset: Function, unbind: Function, handler: Function, accelerate: boolean, left: boolean, up: boolean, right: boolean, down: boolean}}
  * @class keys
  */
- var keys = {
+var keys = {
     /**
      * Связь с клавиатурой
      * @method bind
@@ -17,7 +18,26 @@
             return keys.handler(event, false);
         });
     },
-	/**
+    /**
+     * Сброс нажатых кнопок
+     * @method reset
+     */
+    reset : function() {
+        keys.left = false;
+        keys.right = false;
+        keys.accelerate = false;
+        keys.up = false;
+        keys.down = false;
+    },
+    /**
+     * Отвязка кнопок
+     * @method unbind
+     */
+    unbind : function() {
+        $(document).off('keydown');
+        $(document).off('keyup');
+    },
+    /**
      * Обработчик для клавиатуры, обработка кнопок
      * @method handler
      * @param event событие
