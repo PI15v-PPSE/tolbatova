@@ -1,14 +1,14 @@
-/**
- * Ћбработка клавиатуры
- * @module Љлавиатура
+п»ї/**
+ * РћР±СЂР°Р±РѕС‚РєР° РєР»Р°РІРёР°С‚СѓСЂС‹
+ * @module РљР»Р°РІРёР°С‚СѓСЂР°
  * @type {{bind: Function, reset: Function, unbind: Function, handler: Function, accelerate: boolean, left: boolean, up: boolean, right: boolean, down: boolean}}
  * @class keys
  */
 var keys = {
     /**
-     * ‘вЯзь с клавиатурой
+     * РЎРІСЏР·СЊ СЃ РєР»Р°РІРёР°С‚СѓСЂРѕР№
      * @method bind
-     * @return {handler} обработчик длЯ клавиатуры
+     * @return {handler} РѕР±СЂР°Р±РѕС‚С‡РёРє РґР»СЏ РєР»Р°РІРёР°С‚СѓСЂС‹
      */
     bind : function() {
         $(document).on('keydown', function(event) {
@@ -19,7 +19,7 @@ var keys = {
         });
     },
     /**
-     * ‘брос нажатых кнопок
+     * РЎР±СЂРѕСЃ РЅР°Р¶Р°С‚С‹С… РєРЅРѕРїРѕРє
      * @method reset
      */
     reset : function() {
@@ -30,7 +30,7 @@ var keys = {
         keys.down = false;
     },
     /**
-     * ЋтвЯзка кнопок
+     * РћС‚РІСЏР·РєР° РєРЅРѕРїРѕРє
      * @method unbind
      */
     unbind : function() {
@@ -38,10 +38,10 @@ var keys = {
         $(document).off('keyup');
     },
     /**
-     * Ћбработчик длЯ клавиатуры, обработка кнопок
+     * РћР±СЂР°Р±РѕС‚С‡РёРє РґР»СЏ РєР»Р°РІРёР°С‚СѓСЂС‹, РѕР±СЂР°Р±РѕС‚РєР° РєРЅРѕРїРѕРє
      * @method handler
-     * @param event событие
-     * @param status статус событиЯ
+     * @param event СЃРѕР±С‹С‚РёРµ
+     * @param status СЃС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ
      * @returns {boolean}
      */
     handler : function(event, status) {
