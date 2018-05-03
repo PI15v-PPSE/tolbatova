@@ -1,6 +1,6 @@
 /**
- * Реализация удобного ООП для JS
- * @module ООП
+ * Р РµР°Р»РёР·Р°С†РёСЏ СѓРґРѕР±РЅРѕРіРѕ РћРћРџ РґР»СЏ JS
+ * @module РћРћРџ
  * @class Class
  */
 var reflection = {};
@@ -15,7 +15,7 @@ var reflection = {};
     // Create a new Class that inherits from this class
     /**
      * @method init
-     * @param prop свойство
+     * @param prop СЃРІРѕР№СЃС‚РІРѕ
      * @param ref_name
      * @returns {Function}
      */
