@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Description of the "Super Mario"</title>
+    </info>
+    <sect1>
+        <title>General description of the product</title>
+        <para>Product "Super Mario" - a realization on JavaScript, all well-known game from company
+            Nintendo. In developing the library was used <emphasis role="italic">JQuery</emphasis>,
+            information about library you can read on the site <ulink url="http://jquery.com/">jquery.com</ulink>. Image, for convenience, divided by type on the
+            sprite-map.</para>
+        <para> Control is performed using the buttons on the keyboard and is given below in the
+            table. </para>
+        <table frame="all">
+            <title>Controls</title>
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>Left</entry>
+                        <entry>Arrow <emphasis role="bold">Left</emphasis></entry>
+                    </row>
+                    <row>
+                        <entry>Up</entry>
+                        <entry>Arrow <emphasis role="bold">Up</emphasis></entry>
+                    </row>
+                    <row>
+                        <entry>Right</entry>
+                        <entry>Arrow <emphasis role="bold">Right</emphasis></entry>
+                    </row>
+                    <row>
+                        <entry>Down</entry>
+                        <entry>Arrow <emphasis role="bold">Down</emphasis></entry>
+                    </row>
+                    <row>
+                        <entry>Shot</entry>
+                        <entry>Arrow <emphasis role="bold">CTRL</emphasis></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </sect1>
+    <sect1>
+        <title>Implementation and screenshots of work</title>
+        <para> The whole logic of the product is implemented in a single file
+                <filename>main.js</filename>  , other information such as constants and levels for
+            the game are stored in files:  <filename>constants.js</filename> and
+                <filename>testlevels.js</filename>.</para>
+        <para>About build-level in this game
+            :<programlisting>var definedLevels = [
+{
+ width: 10,
+ height: 11,
+ id: 0,
+ background: 1,
+ data:
+ [
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , 'mario' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , 'gumpa' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil']
+ ]</programlisting></para>
+        <para>All objects in the game have their own characteristics and look similar
+            to:<programlisting>var BrownBlock = Ground.extend({
+    /**
+     * @method init
+     * @param x {number} coordinate X
+     * @param y {number} coordinate Y
+     * @param level
+     */
+    init: function(x, y, level) {
+        var blocking = ground_blocking.all;
+        this._super(x, y, blocking, level);
+        this.setImage(images.objects, 514, 194);
+    }
+}, 'brown_block');
+        </programlisting></para>
+        <para>Below is a listing of file <filename>keys.js</filename> which contains a keyboard
+            handler, without him it would be impossible to control your
+            character.<programlisting>/**
+ * Keyboard
+ * @module Keyboard
+ * @type {{bind: Function, reset: Function, unbind: Function, 
+ * handler: Function, accelerate: boolean, 
+ * left: boolean, up: boolean, right: boolean, down: boolean}}
+ * @class keys
+ */
+var keys = {
+    /**
+     * Connection with a Keyboard
+     * @method bind
+     * @return {handler} Keyboard handler
+     */
+    bind : function() {
+        $(document).on('keydown', function(event) {
+            return keys.handler(event, true);
+        });
+        $(document).on('keyup', function(event) {
+            return keys.handler(event, false);
+        });
+    },
+    /**
+     * Reset
+     * @method reset
+     */
+    reset : function() {
+        keys.left = false;
+        keys.right = false;
+        keys.accelerate = false;
+        keys.up = false;
+        keys.down = false;
+    },
+    /**
+     * Unbind
+     * @method unbind
+     */
+    unbind : function() {
+        $(document).off('keydown');
+        $(document).off('keyup');
+    },
+    /**
+     * @method handler
+     * @param event 
+     * @param status 
+     * @returns {boolean}
+     */
+    handler : function(event, status) {
+        switch(event.keyCode) {
+            case 17://CTRL
+                keys.accelerate = status;
+                break;
+            case 40://DOWN ARROW
+                keys.down = status;
+                break;
+            case 39://RIGHT ARROW
+                keys.right = status;
+                break;
+            case 37://LEFT ARROW
+                keys.left = status;
+                break;
+            case 38://UP ARROW
+                keys.up = status;
+                break;
+            default:
+                return true;
+        }
+            
+        event.preventDefault();
+        return false;
+    },
+    accelerate : false,
+    left : false,
+    up : false,
+    right : false,
+    down : false
+};</programlisting></para>
+        <para>Main file <filename>index.html</filename> is pretty simple. Below is a screenshot of
+            part of the code responsible for the connection of all files containing the game logic
+            and handling the keyboard.
+            <inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="file:/W:/Labs/4_kurs/SuperMario/Docbook/code.png"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Here is a screenshot showing the first level of a running game: <inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="file:/W:/Labs/4_kurs/SuperMario/Docbook/game.png"/>
+                </imageobject>
+            </inlinemediaobject></para>
+    </sect1>
+    <sect1>
+        <title>Conclusions</title>
+        <para>Within a few weeks have developed a software product "Super Mario" using JavaScript,
+            CSS, HTML. This is a great game for those who want to recollect the youth or just kill
+            time. GLHF.</para>
+    </sect1>
+</article>

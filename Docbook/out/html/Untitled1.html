@@ -1,0 +1,126 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Description of the "Super Mario"</title><meta name="generator" content="DocBook XSL Stylesheets V1.77.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><div><div><h1 class="title"><a name="d5e1"></a>Description of the "Super Mario"</h1></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d5e4">General description of the product</a></span></dt><dt><span class="sect1"><a href="#d5e34">Implementation and screenshots of work</a></span></dt><dt><span class="sect1"><a href="#d5e56">Conclusions</a></span></dt></dl></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e4"></a>General description of the product</h2></div></div></div><p>Product "Super Mario" - a realization on JavaScript, all well-known game from company
+            Nintendo. In developing the library was used <span class="italic">JQuery</span>,
+            information about library you can read on the site <a class="ulink" href="http://jquery.com/" target="_top">jquery.com</a>. Image, for convenience, divided by type on the
+            sprite-map.</p><p> Control is performed using the buttons on the keyboard and is given below in the
+            table. </p><div class="table"><a name="d5e10"></a><p class="title"><b>Table&nbsp;1.&nbsp;Controls</b></p><div class="table-contents"><table summary="Controls" border="1"><colgroup><col><col></colgroup><tbody><tr><td>Left</td><td>Arrow <span class="bold"><strong>Left</strong></span></td></tr><tr><td>Up</td><td>Arrow <span class="bold"><strong>Up</strong></span></td></tr><tr><td>Right</td><td>Arrow <span class="bold"><strong>Right</strong></span></td></tr><tr><td>Down</td><td>Arrow <span class="bold"><strong>Down</strong></span></td></tr><tr><td>Shot</td><td>Arrow <span class="bold"><strong>CTRL</strong></span></td></tr></tbody></table></div></div><br class="table-break"></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e34"></a>Implementation and screenshots of work</h2></div></div></div><p> The whole logic of the product is implemented in a single file
+                <code class="filename">main.js</code>  , other information such as constants and levels for
+            the game are stored in files:  <code class="filename">constants.js</code> and
+                <code class="filename">testlevels.js</code>.</p><p>About build-level in this game
+            :</p><pre class="programlisting">var definedLevels = [
+{
+ width: 10,
+ height: 11,
+ id: 0,
+ background: 1,
+ data:
+ [
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , 'mario' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , 'gumpa' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil'],
+  ['' , '' , '' , '' , '' , '' , '' , '' , '' , 'grass_top' , 'soil']
+ ]</pre><p>All objects in the game have their own characteristics and look similar
+            to:</p><pre class="programlisting">var BrownBlock = Ground.extend({
+    /**
+     * @method init
+     * @param x {number} coordinate X
+     * @param y {number} coordinate Y
+     * @param level
+     */
+    init: function(x, y, level) {
+        var blocking = ground_blocking.all;
+        this._super(x, y, blocking, level);
+        this.setImage(images.objects, 514, 194);
+    }
+}, 'brown_block');
+        </pre><p>Below is a listing of file <code class="filename">keys.js</code> which contains a keyboard
+            handler, without him it would be impossible to control your
+            character.</p><pre class="programlisting">/**
+ * Keyboard
+ * @module Keyboard
+ * @type {{bind: Function, reset: Function, unbind: Function, 
+ * handler: Function, accelerate: boolean, 
+ * left: boolean, up: boolean, right: boolean, down: boolean}}
+ * @class keys
+ */
+var keys = {
+    /**
+     * Connection with a Keyboard
+     * @method bind
+     * @return {handler} Keyboard handler
+     */
+    bind : function() {
+        $(document).on('keydown', function(event) {
+            return keys.handler(event, true);
+        });
+        $(document).on('keyup', function(event) {
+            return keys.handler(event, false);
+        });
+    },
+    /**
+     * Reset
+     * @method reset
+     */
+    reset : function() {
+        keys.left = false;
+        keys.right = false;
+        keys.accelerate = false;
+        keys.up = false;
+        keys.down = false;
+    },
+    /**
+     * Unbind
+     * @method unbind
+     */
+    unbind : function() {
+        $(document).off('keydown');
+        $(document).off('keyup');
+    },
+    /**
+     * @method handler
+     * @param event 
+     * @param status 
+     * @returns {boolean}
+     */
+    handler : function(event, status) {
+        switch(event.keyCode) {
+            case 17://CTRL
+                keys.accelerate = status;
+                break;
+            case 40://DOWN ARROW
+                keys.down = status;
+                break;
+            case 39://RIGHT ARROW
+                keys.right = status;
+                break;
+            case 37://LEFT ARROW
+                keys.left = status;
+                break;
+            case 38://UP ARROW
+                keys.up = status;
+                break;
+            default:
+                return true;
+        }
+            
+        event.preventDefault();
+        return false;
+    },
+    accelerate : false,
+    left : false,
+    up : false,
+    right : false,
+    down : false
+};</pre><p>Main file <code class="filename">index.html</code> is pretty simple. Below is a screenshot of
+            part of the code responsible for the connection of all files containing the game logic
+            and handling the keyboard.
+            <span class="inlinemediaobject"><img src="file:/W:/Labs/4_kurs/SuperMario/Docbook/code.png"></span></p><p>Here is a screenshot showing the first level of a running game: <span class="inlinemediaobject"><img src="file:/W:/Labs/4_kurs/SuperMario/Docbook/game.png"></span></p></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e56"></a>Conclusions</h2></div></div></div><p>Within a few weeks have developed a software product "Super Mario" using JavaScript,
+            CSS, HTML. This is a great game for those who want to recollect the youth or just kill
+            time. GLHF.</p></div></div></body></html>

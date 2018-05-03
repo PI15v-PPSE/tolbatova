@@ -1,0 +1,3052 @@
+{
+    "project": {},
+    "files": {
+        "constants.js": {
+            "name": "constants.js",
+            "modules": {
+                "Константы": 1
+            },
+            "classes": {
+                "Constants": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "keys.js": {
+            "name": "keys.js",
+            "modules": {
+                "Клавиатура": 1
+            },
+            "classes": {
+                "keys": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "main.js": {
+            "name": "main.js",
+            "modules": {
+                "Основные классы": 1,
+                "Start": 1
+            },
+            "classes": {
+                "Base": 1,
+                "Gauge": 1,
+                "Level": 1,
+                "Figure": 1,
+                "Matter": 1,
+                "ground": 1,
+                "TopGrass": 1,
+                "Stone": 1,
+                "BrownBlock": 1,
+                "RightTopPipe": 1,
+                "LeftTopPipe": 1,
+                "RightPipe": 1,
+                "LeftPipe": 1,
+                "Decoration": 1,
+                "Soil": 1,
+                "Item": 1,
+                "Coin": 1,
+                "CoinBoxCoin": 1,
+                "CoinBox": 1,
+                "ItemFigure": 1,
+                "MushroomBox": 1,
+                "Mushroom": 1,
+                "Bullet": 1,
+                "Hero": 1,
+                "Mario": 1,
+                "Enemy": 1,
+                "Gumpa": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "oop.js": {
+            "name": "oop.js",
+            "modules": {
+                "ООП": 1
+            },
+            "classes": {
+                "Class": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "testlevels.js": {
+            "name": "testlevels.js",
+            "modules": {
+                "Уровни": 1
+            },
+            "classes": {
+                "Levels": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Константы": {
+            "name": "Константы",
+            "submodules": {},
+            "classes": {
+                "Constants": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "constants.js",
+            "line": 1,
+            "description": "Константы необходимые для работы игры",
+            "type": "{string}"
+        },
+        "Клавиатура": {
+            "name": "Клавиатура",
+            "submodules": {},
+            "classes": {
+                "keys": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "keys.js",
+            "line": 1,
+            "description": "Обработка клавиатуры",
+            "type": "{{bind: Function, reset: Function, unbind: Function, handler: Function, accelerate: boolean, left: boolean, up: boolean, right: boolean, down: boolean}}"
+        },
+        "Основные классы": {
+            "name": "Основные классы",
+            "submodules": {},
+            "classes": {
+                "Base": 1,
+                "Gauge": 1,
+                "Level": 1,
+                "Figure": 1,
+                "Matter": 1,
+                "ground": 1,
+                "TopGrass": 1,
+                "Stone": 1,
+                "BrownBlock": 1,
+                "RightTopPipe": 1,
+                "LeftTopPipe": 1,
+                "RightPipe": 1,
+                "LeftPipe": 1,
+                "Decoration": 1,
+                "Soil": 1,
+                "Item": 1,
+                "Coin": 1,
+                "CoinBoxCoin": 1,
+                "CoinBox": 1,
+                "ItemFigure": 1,
+                "MushroomBox": 1,
+                "Mushroom": 1,
+                "Bullet": 1,
+                "Hero": 1,
+                "Mario": 1,
+                "Enemy": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "main.js",
+            "line": 1694,
+            "description": "Базовый класс, позволяет инициализировать объекты,\nустанавливать и получать позицию,\nустанавливать и получать изображение и размер,\nсодержит всю работу с экраном.",
+            "extends": "Class"
+        },
+        "Start": {
+            "name": "Start",
+            "submodules": {},
+            "classes": {
+                "Gumpa": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "main.js",
+            "line": 1798,
+            "description": "Запуск всего и всея"
+        },
+        "ООП": {
+            "name": "ООП",
+            "submodules": {},
+            "classes": {
+                "Class": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "oop.js",
+            "line": 58,
+            "description": "Реализация удобного ООП для JS"
+        },
+        "Уровни": {
+            "name": "Уровни",
+            "submodules": {},
+            "classes": {
+                "Levels": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "testlevels.js",
+            "line": 1,
+            "description": "Структура объекта содержащего все необходимое для конструирования уровня\nFORMAT OF A LEVEL FOR JSON SERIALIZATION:\n{\nheight: int,\nwidth: int,\nid: int,\nbackground: int,\ndata: array[array]\n}"
+        }
+    },
+    "classes": {
+        "Constants": {
+            "name": "Constants",
+            "shortname": "Constants",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Константы",
+            "namespace": "",
+            "file": "constants.js",
+            "line": 1,
+            "description": "Константы необходимые для работы игры"
+        },
+        "keys": {
+            "name": "keys",
+            "shortname": "keys",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Клавиатура",
+            "namespace": "",
+            "file": "keys.js",
+            "line": 1,
+            "description": "Обработка клавиатуры",
+            "type": "{{bind: Function, reset: Function, unbind: Function, handler: Function, accelerate: boolean, left: boolean, up: boolean, right: boolean, down: boolean}}"
+        },
+        "Base": {
+            "name": "Base",
+            "shortname": "Base",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1,
+            "description": "Базовый класс, позволяет инициализировать объекты,\nустанавливать и получать позицию,\nустанавливать и получать изображение и размер,\nсодержит всю работу с экраном."
+        },
+        "Gauge": {
+            "name": "Gauge",
+            "shortname": "Gauge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 127,
+            "description": "Класс отвечающий за калибровку изображения заднего фона",
+            "extends": "Base"
+        },
+        "Level": {
+            "name": "Level",
+            "shortname": "Level",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 152,
+            "description": "Класс описывающий уровень",
+            "extends": "Base"
+        },
+        "Figure": {
+            "name": "Figure",
+            "shortname": "Figure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 429,
+            "description": "Класс отвечающий за всех персонажей, монстров, etc.",
+            "extends": "Base"
+        },
+        "Matter": {
+            "name": "Matter",
+            "shortname": "Matter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 674,
+            "description": "Класс отвечающий за все материалы в игре (блоки, etc)",
+            "extends": "Base"
+        },
+        "ground": {
+            "name": "ground",
+            "shortname": "ground",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 730,
+            "description": "Класс описывающий блоки",
+            "extends": "Matter"
+        },
+        "TopGrass": {
+            "name": "TopGrass",
+            "shortname": "TopGrass",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 748,
+            "description": "Блок описывающий блок с травой сверху",
+            "extends": "Ground"
+        },
+        "Stone": {
+            "name": "Stone",
+            "shortname": "Stone",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 767,
+            "description": "Класс описывающий блок из камня",
+            "extends": "Ground"
+        },
+        "BrownBlock": {
+            "name": "BrownBlock",
+            "shortname": "BrownBlock",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 786,
+            "description": "Класс описывающий обычный блок",
+            "extends": "Ground"
+        },
+        "RightTopPipe": {
+            "name": "RightTopPipe",
+            "shortname": "RightTopPipe",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 805,
+            "description": "Класс описывающий кусок трубы",
+            "extends": "Ground"
+        },
+        "LeftTopPipe": {
+            "name": "LeftTopPipe",
+            "shortname": "LeftTopPipe",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 823,
+            "description": "Класс описывающий кусок трубы",
+            "extends": "Ground"
+        },
+        "RightPipe": {
+            "name": "RightPipe",
+            "shortname": "RightPipe",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 841,
+            "description": "Класс описывающий кусок трубы",
+            "extends": "Ground"
+        },
+        "LeftPipe": {
+            "name": "LeftPipe",
+            "shortname": "LeftPipe",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 859,
+            "description": "Класс описывающий кусок трубы",
+            "extends": "Ground"
+        },
+        "Decoration": {
+            "name": "Decoration",
+            "shortname": "Decoration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 878,
+            "description": "Декорации",
+            "extends": "Matter"
+        },
+        "Soil": {
+            "name": "Soil",
+            "shortname": "Soil",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 921,
+            "description": "Обычная земля",
+            "extends": "Decoration"
+        },
+        "Item": {
+            "name": "Item",
+            "shortname": "Item",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 939,
+            "description": "Класс отвечающий за различные предметы",
+            "extends": "Matter"
+        },
+        "Coin": {
+            "name": "Coin",
+            "shortname": "Coin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1017,
+            "description": "Класс описывающий монетку",
+            "extends": "Item"
+        },
+        "CoinBoxCoin": {
+            "name": "CoinBoxCoin",
+            "shortname": "CoinBoxCoin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1053,
+            "description": "Блок с монетками, общий класс",
+            "extends": "Coin"
+        },
+        "CoinBox": {
+            "name": "CoinBox",
+            "shortname": "CoinBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1104,
+            "description": "Блок с монетками обычный",
+            "extends": "Item"
+        },
+        "ItemFigure": {
+            "name": "ItemFigure",
+            "shortname": "ItemFigure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1167,
+            "description": "class ItemFigure",
+            "extends": "Figure"
+        },
+        "MushroomBox": {
+            "name": "MushroomBox",
+            "shortname": "MushroomBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1179,
+            "description": "Класс описывающий блок с грибом",
+            "extends": "Item",
+            "type": "{*}"
+        },
+        "Mushroom": {
+            "name": "Mushroom",
+            "shortname": "Mushroom",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1218,
+            "description": "Класс описывающий гриб",
+            "extends": "ItemFigure",
+            "type": "{*}"
+        },
+        "Bullet": {
+            "name": "Bullet",
+            "shortname": "Bullet",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1293,
+            "description": "Класс описывающий снаряды которыми стреляет марио",
+            "extends": "Figure",
+            "type": "{*}"
+        },
+        "Hero": {
+            "name": "Hero",
+            "shortname": "Hero",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1354,
+            "description": "Описывает героя",
+            "extends": "Figure",
+            "type": "{*}"
+        },
+        "Mario": {
+            "name": "Mario",
+            "shortname": "Mario",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1366,
+            "description": "Класс создающий и описывающий марио",
+            "extends": "Hero",
+            "type": "{*}"
+        },
+        "Enemy": {
+            "name": "Enemy",
+            "shortname": "Enemy",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Основные классы",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1694,
+            "extends": "Figure",
+            "type": "{*}"
+        },
+        "Gumpa": {
+            "name": "Gumpa",
+            "shortname": "Gumpa",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Start",
+            "namespace": "",
+            "file": "main.js",
+            "line": 1798,
+            "description": "Первоначальный враг",
+            "extends": "Enemy",
+            "type": "{*}"
+        },
+        "Class": {
+            "name": "Class",
+            "shortname": "Class",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ООП",
+            "namespace": "",
+            "file": "oop.js",
+            "line": 58,
+            "description": "Реализация удобного ООП для JS",
+            "is_constructor": 1
+        },
+        "Levels": {
+            "name": "Levels",
+            "shortname": "Levels",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Уровни",
+            "namespace": "",
+            "file": "testlevels.js",
+            "line": 1,
+            "description": "Структура объекта содержащего все необходимое для конструирования уровня\nFORMAT OF A LEVEL FOR JSON SERIALIZATION:\n{\nheight: int,\nwidth: int,\nid: int,\nbackground: int,\ndata: array[array]\n}"
+        }
+    },
+    "classitems": [
+        {
+            "file": "constants.js",
+            "line": 7,
+            "description": "Базовый путь",
+            "itemtype": "property",
+            "name": "BASEPATH",
+            "type": "{string}",
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "DIV",
+            "type": "{string}",
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 18,
+            "itemtype": "property",
+            "name": "CLS_FIGURE",
+            "type": "{string}",
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 23,
+            "itemtype": "property",
+            "name": "CLS_MATTER",
+            "type": "{string}",
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 28,
+            "description": "Направления марио",
+            "itemtype": "property",
+            "name": "directions",
+            "type": "{{none: number, left: number, up: number, right: number, down: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "none",
+                    "description": "нет направления",
+                    "type": "Number"
+                },
+                {
+                    "name": "left",
+                    "description": "влево",
+                    "type": "Number"
+                },
+                {
+                    "name": "up",
+                    "description": "вверх",
+                    "type": "Number"
+                },
+                {
+                    "name": "right",
+                    "description": "вправо",
+                    "type": "Number"
+                },
+                {
+                    "name": "down",
+                    "description": "вниз",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 45,
+            "description": "Состояния марио обычное/гриб или после цветка",
+            "itemtype": "property",
+            "name": "mario_states",
+            "type": "{{normal: number, fire: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "normal",
+                    "description": "нормальное состояние марио",
+                    "type": "Number"
+                },
+                {
+                    "name": "fire",
+                    "description": "состояние стреляющего марио",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 56,
+            "description": "Размер марио под грибом и без него",
+            "itemtype": "property",
+            "name": "size_states",
+            "type": "{{small: number, big: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "small",
+                    "description": "маленький марио",
+                    "type": "Number"
+                },
+                {
+                    "name": "big",
+                    "description": "большой марио",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 67,
+            "description": "Блоки",
+            "itemtype": "property",
+            "name": "ground_blocking",
+            "type": "{{none: number, left: number, top: number, right: number, bottom: number, all: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "none",
+                    "description": "нет направления",
+                    "type": "Number"
+                },
+                {
+                    "name": "left",
+                    "description": "влево блок",
+                    "type": "Number"
+                },
+                {
+                    "name": "top",
+                    "description": "вверх блок",
+                    "type": "Number"
+                },
+                {
+                    "name": "right",
+                    "description": "вправо блок",
+                    "type": "Number"
+                },
+                {
+                    "name": "bottom",
+                    "description": "вниз блок",
+                    "type": "Number"
+                },
+                {
+                    "name": "all",
+                    "description": "блок везде",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 86,
+            "description": "Виды смертей (100% смерть и просто понижение лвла)",
+            "itemtype": "property",
+            "name": "death_modes",
+            "type": "{{normal: number, shell: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "normal",
+                    "description": "обычная смерть",
+                    "type": "Number"
+                },
+                {
+                    "name": "shell",
+                    "description": "сброс мощности марио",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 97,
+            "description": "Пути к файлам со спрайтами",
+            "itemtype": "property",
+            "name": "images",
+            "type": "{{enemies: string, sprites: string, objects: string, peach: string}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "enemies",
+                    "description": "Путь к изображениям с врагами",
+                    "type": "String"
+                },
+                {
+                    "name": "sprites",
+                    "description": "Путь к изображениям с марио",
+                    "type": "String"
+                },
+                {
+                    "name": "objects",
+                    "description": "Путь к изображениям с объектами",
+                    "type": "String"
+                },
+                {
+                    "name": "peach",
+                    "description": "Путь к изображениям с принцессой",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 112,
+            "description": "Различные константы, названия говорят сами о себе",
+            "itemtype": "property",
+            "name": "constants",
+            "type": "{{interval: number, bounce: number, cooldown: number, gravity: number, start_lives: number, max_width: number, max_height: number, jumping_v: number, walking_v: number, mushroom_v: number, ballmonster_v: number, spiked_turtle_v: number, small_turtle_v: number, big_turtle_v: number, shell_v: number, shell_wait: number, star_vx: number, star_vy: number, bullet_v: number, max_coins: number, pipeplant_count: number, pipeplant_v: number, invincible: number, invulnerable: number, blinkfactor: number}}",
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 144,
+            "description": "Гриб или цветок если гриб уже съели",
+            "itemtype": "property",
+            "name": "mushroom_mode",
+            "type": "{{mushroom: number, plant: number}}",
+            "class": "Constants",
+            "module": "Константы",
+            "subprops": [
+                {
+                    "name": "mushroom",
+                    "description": "Гриб",
+                    "type": "Number"
+                },
+                {
+                    "name": "plant",
+                    "description": "Цветок",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "file": "constants.js",
+            "line": 155,
+            "itemtype": "method",
+            "name": "c2u",
+            "params": [
+                {
+                    "name": "s",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 163,
+            "itemtype": "method",
+            "name": "q2q",
+            "params": [
+                {
+                    "name": "figure",
+                    "description": ""
+                },
+                {
+                    "name": "opponent",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "constants.js",
+            "line": 181,
+            "itemtype": "method",
+            "name": "sign",
+            "params": [
+                {
+                    "name": "x",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "Constants",
+            "module": "Константы"
+        },
+        {
+            "file": "keys.js",
+            "line": 8,
+            "description": "Связь с клавиатурой",
+            "itemtype": "method",
+            "name": "bind",
+            "return": {
+                "description": "обработчик для клавиатуры",
+                "type": "Handler"
+            },
+            "class": "keys",
+            "module": "Клавиатура"
+        },
+        {
+            "file": "keys.js",
+            "line": 21,
+            "description": "Сброс нажатых кнопок",
+            "itemtype": "method",
+            "name": "reset",
+            "class": "keys",
+            "module": "Клавиатура"
+        },
+        {
+            "file": "keys.js",
+            "line": 32,
+            "description": "Отвязка кнопок",
+            "itemtype": "method",
+            "name": "unbind",
+            "class": "keys",
+            "module": "Клавиатура"
+        },
+        {
+            "file": "keys.js",
+            "line": 40,
+            "description": "Обработчик для клавиатуры, обработка кнопок",
+            "itemtype": "method",
+            "name": "handler",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "событие"
+                },
+                {
+                    "name": "status",
+                    "description": "статус события"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "keys",
+            "module": "Клавиатура"
+        },
+        {
+            "file": "main.js",
+            "line": 12,
+            "description": "Инициализация",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "X координата",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "Y координата",
+                    "type": "Number"
+                }
+            ],
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 23,
+            "description": "Установка позиции объекта",
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "X координата",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "Y координата",
+                    "type": "Number"
+                }
+            ],
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 33,
+            "description": "Получение позиции объекта",
+            "itemtype": "method",
+            "name": "getPosition",
+            "return": {
+                "description": "координаты объекта",
+                "type": "Number, number"
+            },
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 41,
+            "description": "Установка изображения",
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "img",
+                    "description": "путь к изображению",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "X координата",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "Y координата",
+                    "type": "Number"
+                }
+            ],
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 55,
+            "description": "Установка размера изображения",
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "ширина изображения",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "высота изображения",
+                    "type": "Number"
+                }
+            ],
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 65,
+            "description": "Получение размера изображения",
+            "itemtype": "method",
+            "name": "getSize",
+            "return": {
+                "description": "ширина и высота изображения",
+                "type": "Number, number"
+            },
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 73,
+            "description": "Установки для экрана(работа с кадрами)",
+            "itemtype": "method",
+            "name": "setupFrames",
+            "params": [
+                {
+                    "name": "fps",
+                    "description": "кадры в секунду",
+                    "type": "Number"
+                },
+                {
+                    "name": "frames",
+                    "description": "кадры",
+                    "type": "Number"
+                },
+                {
+                    "name": "rewind",
+                    "description": "ускорение",
+                    "type": "Number"
+                },
+                {
+                    "name": "id",
+                    "description": "ID",
+                    "type": "Number"
+                }
+            ],
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 94,
+            "description": "Установки для экрана(обнуление кадров)",
+            "itemtype": "method",
+            "name": "clearFrames",
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 104,
+            "description": "Проигрывание и движение экрана",
+            "itemtype": "method",
+            "name": "playFrame",
+            "class": "Base",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 133,
+            "description": "Инициализация",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID",
+                    "type": "Number"
+                },
+                {
+                    "name": "startImgX",
+                    "description": "стартовое значение координаты по X",
+                    "type": "Number"
+                },
+                {
+                    "name": "startImgY",
+                    "description": "стартовое значение координаты по Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "fps",
+                    "description": "кадры в секунду",
+                    "type": "Number"
+                },
+                {
+                    "name": "frames",
+                    "description": "кадры",
+                    "type": "Number"
+                },
+                {
+                    "name": "rewind",
+                    "description": "ускорение",
+                    "type": "Number"
+                }
+            ],
+            "class": "Gauge",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 158,
+            "description": "Инициализация уровня",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID",
+                    "type": "Number"
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 175,
+            "description": "Перезагрузка уровня",
+            "itemtype": "method",
+            "name": "reload",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 209,
+            "description": "Загрузка уровня",
+            "mathod": "load",
+            "params": [
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 249,
+            "description": "Переключение на следующий уровень",
+            "itemtype": "method",
+            "name": "next",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 256,
+            "description": "Следующий уровень",
+            "itemtype": "method",
+            "name": "nextLoad",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 292,
+            "itemtype": "method",
+            "name": "getGridWidth",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 299,
+            "itemtype": "method",
+            "name": "getGridHeight",
+            "return": {
+                "description": "",
+                "type": "*|number"
+            },
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 306,
+            "description": "Сброс параметров уровня",
+            "itemtype": "method",
+            "name": "reset",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 318,
+            "description": "Запуск",
+            "itemtype": "method",
+            "name": "tick",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 372,
+            "description": "Старт игры",
+            "itemtype": "method",
+            "name": "start",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 382,
+            "description": "Пауза в игре",
+            "itemtype": "method",
+            "name": "pause",
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 390,
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 399,
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "index",
+                    "description": "индекс",
+                    "type": "Number"
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 411,
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "ширина",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "высота",
+                    "type": "Number"
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 419,
+            "itemtype": "method",
+            "name": "setParallax",
+            "params": [
+                {
+                    "name": "x",
+                    "description": ""
+                }
+            ],
+            "class": "Level",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 435,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 454,
+            "itemtype": "method",
+            "name": "setState",
+            "params": [
+                {
+                    "name": "state",
+                    "description": ""
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 461,
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "img",
+                    "description": "путь к изображению",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 474,
+            "itemtype": "method",
+            "name": "setOffset",
+            "params": [
+                {
+                    "name": "dx",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "dy",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 484,
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 499,
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "ширина",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "высота",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 511,
+            "itemtype": "method",
+            "name": "setGridPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 523,
+            "itemtype": "method",
+            "name": "setVelocity",
+            "params": [
+                {
+                    "name": "vx",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "vy",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 537,
+            "itemtype": "method",
+            "name": "hit",
+            "params": [
+                {
+                    "name": "opponent",
+                    "description": ""
+                }
+            ],
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 544,
+            "description": "Метод просчитывающий столкновения объектов",
+            "itemtype": "method",
+            "name": "collides",
+            "params": [
+                {
+                    "name": "is",
+                    "description": ""
+                },
+                {
+                    "name": "ie",
+                    "description": ""
+                },
+                {
+                    "name": "js",
+                    "description": ""
+                },
+                {
+                    "name": "je",
+                    "description": ""
+                },
+                {
+                    "name": "blocking",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 579,
+            "description": "Метод отвечающий за просчитывание движения объектов",
+            "itemtype": "method",
+            "name": "move",
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 659,
+            "itemtype": "method",
+            "name": "death",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 666,
+            "itemtype": "method",
+            "name": "die",
+            "class": "Figure",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 680,
+            "description": "Инициализирует объект 32х32 пикселя",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "blocking",
+                    "description": "блок или украшение и тд",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": "уровень"
+                }
+            ],
+            "class": "Matter",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 696,
+            "itemtype": "method",
+            "name": "addToGrid",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "уровень"
+                }
+            ],
+            "class": "Matter",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 703,
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "img",
+                    "description": "путь к изображению",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Matter",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 716,
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Matter",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 736,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "blocking",
+                    "description": "блок или украшение и тд",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "ground",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 754,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "TopGrass",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 773,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Stone",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 792,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "BrownBlock",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 811,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "RightTopPipe",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 829,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "LeftTopPipe",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 847,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "RightPipe",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 865,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "LeftPipe",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 884,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Decoration",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 894,
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "img",
+                    "description": "путь к изображению",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Decoration",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 907,
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Decoration",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 927,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Soil",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 945,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "isBlocking",
+                    "description": "Блок или нет"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Item",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 963,
+            "description": "Добавить в уровень",
+            "itemtype": "method",
+            "name": "addToLevel",
+            "params": [
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Item",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 971,
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "Item",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 978,
+            "description": "Движение",
+            "itemtype": "method",
+            "name": "bounce",
+            "class": "Item",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 996,
+            "description": "Запуск проигрывания",
+            "itemtype": "method",
+            "name": "playFrame",
+            "class": "Item",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1023,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата по X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата по Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Coin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1034,
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "Coin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1045,
+            "description": "Убрать из видимости",
+            "itemtype": "method",
+            "name": "remove",
+            "class": "Coin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1059,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата по X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата по Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1074,
+            "itemtype": "method",
+            "name": "remove",
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1078,
+            "itemtype": "method",
+            "name": "addToGrid",
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1082,
+            "itemtype": "method",
+            "name": "addToLevel",
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1086,
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1094,
+            "itemtype": "method",
+            "name": "act",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "CoinBoxCoin",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1110,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата по X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата по Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                },
+                {
+                    "name": "amount",
+                    "description": "количество монет",
+                    "type": "Number"
+                }
+            ],
+            "class": "CoinBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1122,
+            "itemtype": "method",
+            "name": "setAmount",
+            "params": [
+                {
+                    "name": "amount",
+                    "description": ""
+                }
+            ],
+            "class": "CoinBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1133,
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "CoinBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1152,
+            "itemtype": "method",
+            "name": "playFrame",
+            "class": "CoinBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1186,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "MushroomBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1199,
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "MushroomBox",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1225,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Mushroom",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1239,
+            "description": "Изображение гриба показывается",
+            "itemtype": "method",
+            "name": "release",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": ""
+                }
+            ],
+            "class": "Mushroom",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1253,
+            "description": "Дживение гриба по карте",
+            "itemtype": "method",
+            "name": "move",
+            "class": "Mushroom",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1276,
+            "description": "При столкновении с марио в зависимости от его размера он либо ростет либо стреляет",
+            "itemtype": "method",
+            "name": "hit",
+            "params": [
+                {
+                    "name": "opponent",
+                    "description": ""
+                }
+            ],
+            "class": "Mushroom",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1300,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "parent",
+                    "description": ""
+                }
+            ],
+            "class": "Bullet",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1315,
+            "itemtype": "method",
+            "name": "setVelocity",
+            "params": [
+                {
+                    "name": "vx",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "vy",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Bullet",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1331,
+            "description": "Движение снаряда",
+            "itemtype": "method",
+            "name": "move",
+            "class": "Bullet",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1341,
+            "description": "Столкновение с врагом",
+            "itemtype": "method",
+            "name": "hit",
+            "params": [
+                {
+                    "name": "opponent",
+                    "description": ""
+                }
+            ],
+            "class": "Bullet",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1373,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1410,
+            "itemtype": "method",
+            "name": "setMarioState",
+            "params": [
+                {
+                    "name": "state",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1417,
+            "itemtype": "method",
+            "name": "setState",
+            "params": [
+                {
+                    "name": "state",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1427,
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1441,
+            "description": "Обработка нажатий кнопок на клавиатуре и соответствующие движения марио",
+            "itemtype": "method",
+            "name": "input",
+            "params": [
+                {
+                    "name": "keys",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1463,
+            "description": "Описание победы",
+            "itemtype": "method",
+            "name": "victory",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1473,
+            "description": "Стрельба и CD",
+            "itemtype": "method",
+            "name": "shoot",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1483,
+            "itemtype": "method",
+            "name": "setVelocity",
+            "params": [
+                {
+                    "name": "vx",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "vy",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1503,
+            "description": "Марио больше",
+            "itemtype": "method",
+            "name": "grow",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1512,
+            "description": "Стрелок",
+            "itemtype": "method",
+            "name": "shooter",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1522,
+            "itemtype": "method",
+            "name": "walk",
+            "params": [
+                {
+                    "name": "reverse",
+                    "description": ""
+                },
+                {
+                    "name": "fast",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1530,
+            "itemtype": "method",
+            "name": "walkRight",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1542,
+            "itemtype": "method",
+            "name": "walkLeft",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1554,
+            "itemtype": "method",
+            "name": "stand",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1562,
+            "itemtype": "method",
+            "name": "crouch",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1570,
+            "itemtype": "method",
+            "name": "jump",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1576,
+            "itemtype": "method",
+            "name": "move",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1583,
+            "description": "Увеличениее счетчика монет",
+            "itemtype": "method",
+            "name": "addCoin",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1590,
+            "itemtype": "method",
+            "name": "playFrame",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1610,
+            "itemtype": "method",
+            "name": "setCoins",
+            "params": [
+                {
+                    "name": "coins",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1624,
+            "description": "Добавление жизни",
+            "itemtype": "method",
+            "name": "addLife",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1631,
+            "itemtype": "method",
+            "name": "setLifes",
+            "params": [
+                {
+                    "name": "lifes",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1639,
+            "description": "Не окончательная смерть",
+            "itemtype": "method",
+            "name": "death",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1663,
+            "description": "Окончательная смерть",
+            "itemtype": "method",
+            "name": "die",
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1674,
+            "description": "Ранение, сброс бонусов",
+            "itemtype": "method",
+            "name": "hurt",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "Mario",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1700,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "координата Y",
+                    "type": "Number"
+                },
+                {
+                    "name": "level",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1710,
+            "itemtype": "method",
+            "name": "hide",
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1717,
+            "itemtype": "method",
+            "name": "show",
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1724,
+            "itemtype": "method",
+            "name": "move",
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1737,
+            "description": "Просчет столкновений",
+            "itemtype": "method",
+            "name": "collides",
+            "params": [
+                {
+                    "name": "is",
+                    "description": ""
+                },
+                {
+                    "name": "ie",
+                    "description": ""
+                },
+                {
+                    "name": "js",
+                    "description": ""
+                },
+                {
+                    "name": "je",
+                    "description": ""
+                },
+                {
+                    "name": "blocking",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1762,
+            "itemtype": "method",
+            "name": "setSpeed",
+            "params": [
+                {
+                    "name": "v",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1770,
+            "description": "Смерть",
+            "itemtype": "method",
+            "name": "hurt",
+            "params": [
+                {
+                    "name": "from",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1778,
+            "description": "Урон",
+            "itemtype": "method",
+            "name": "hit",
+            "params": [
+                {
+                    "name": "opponent",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1812,
+            "itemtype": "method",
+            "name": "setVelocity",
+            "params": [
+                {
+                    "name": "vx",
+                    "description": "координата X",
+                    "type": "Number"
+                },
+                {
+                    "name": "vy",
+                    "description": "координата Y",
+                    "type": "Number"
+                }
+            ],
+            "class": "Gumpa",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1828,
+            "itemtype": "method",
+            "name": "death",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Gumpa",
+            "module": "Основные классы"
+        },
+        {
+            "file": "main.js",
+            "line": 1846,
+            "itemtype": "method",
+            "name": "die",
+            "class": "Gumpa",
+            "module": "Основные классы"
+        },
+        {
+            "file": "oop.js",
+            "line": 16,
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "prop",
+                    "description": "свойство"
+                },
+                {
+                    "name": "ref_name",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Class",
+            "module": "ООП"
+        },
+        {
+            "file": "testlevels.js",
+            "line": 14,
+            "description": "Описание уровней",
+            "itemtype": "property",
+            "name": "definedLevels",
+            "type": "{Array}",
+            "class": "Levels",
+            "module": "Уровни",
+            "subprops": [
+                {
+                    "name": "width",
+                    "description": "ширина уровня",
+                    "type": "Integer"
+                },
+                {
+                    "name": "height",
+                    "description": "высота уровня",
+                    "type": "Integer"
+                },
+                {
+                    "name": "id",
+                    "description": "ID уровня",
+                    "type": "Integer"
+                },
+                {
+                    "name": "background",
+                    "description": "задний фон для уровня",
+                    "type": "Integer"
+                },
+                {
+                    "name": "data",
+                    "description": "уровень",
+                    "type": "Array of strings"
+                }
+            ]
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " constants.js:155"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " constants.js:163"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " constants.js:181"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " keys.js:40"
+        },
+        {
+            "message": "unknown tag: mathod",
+            "line": " main.js:209"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:292"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:299"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:318"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:544"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:659"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:1094"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:1639"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:1737"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " main.js:1828"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " oop.js:16"
+        },
+        {
+            "message": "Missing item type\nЗагрузка уровня",
+            "line": " main.js:209"
+        }
+    ]
+}
